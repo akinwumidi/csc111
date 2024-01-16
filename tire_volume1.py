@@ -2,8 +2,6 @@
 # Student ID: 472252522
 
 import math
-import datetime
-
 
 # Function to calculate tire volume
 def calculate_tire_volume(width, aspect_ratio, diameter):
@@ -27,17 +25,3 @@ diameter = float(input("Enter the diameter of the wheel in inches (ex 15): "))
 # Calculate and display the tire volume
 tire_volume = calculate_tire_volume(width, aspect_ratio, diameter)
 print(f"The volume of the tire is: {tire_volume:.2f} cubic units")
-
-
-# Get the current date in YYY-MM-DD format
-current_date = datetime.datetime.now().strftime("%Y-%m-%d")
-
-# String to append to the file
-w = f"Width entered: {width} \n"
-a = f"Aspect ratio entered: {aspect_ratio}\n"
-d = f"Diameter entered: {diameter}\n"
-v = f"Volume computed: {tire_volume}\n"
-data_to_append = f"{current_date}\n{w}{a}{d}{v}\n\n"
-# Append data to the text file
-with open("volumes.txt", "a") as file:
-    file.write(data_to_append)
